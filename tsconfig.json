@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "module": "CommonJS",
+        "target": "es5",
+        "noImplicitAny": true,
+        "outDir": "dist",
+        "removeComments": true,
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true
+    },
+    "filesGlob": [
+        "./src/**/*.ts",
+        "./typings/**/*.ts",
+        "!./node_modules/**/*.ts",
+        "!./lib"
+    ],
+    "files": [
+        "./src/interfaces/index.ts",
+        "./src/methods/Delete.ts",
+        "./src/methods/Get.ts",
+        "./src/methods/Method.ts",
+        "./src/methods/Post.ts",
+        "./src/methods/Put.ts",
+        "./src/restifier.ts",
+        "./typings/auto.d.ts",
+        "./typings/globals.d.ts"
+    ],
+    "compileOnSave": false,
+    "formatCodeOptions": {
+        "indentSize": 4,
+        "tabSize": 4,
+        "newLineCharacter": "\r\n",
+        "convertTabsToSpaces": true,
+        "insertSpaceAfterCommaDelimiter": true,
+        "insertSpaceAfterSemicolonInForStatements": true,
+        "insertSpaceBeforeAndAfterBinaryOperators": true,
+        "insertSpaceAfterKeywordsInControlFlowStatements": true,
+        "insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+        "insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+        "placeOpenBraceOnNewLineForFunctions": false,
+        "placeOpenBraceOnNewLineForControlBlocks": false
+    },
+    "atom": {
+        "rewriteTsconfig": true
+    }
+}
