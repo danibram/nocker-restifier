@@ -2,7 +2,7 @@
   "name": "nocker-restifier",
   "version": "1.0.0",
   "description": "Fully restifier calls for nocker.",
-  "main": "dist/nocker-restifier.js",
+  "main": "lib/",
   "scripts": {
     "dev": "tsc -w",
     "test": "node test/test.js"
