@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "declaration": true,
-        "module": "CommonJS",
+        "module": "commonjs",
         "target": "es5",
         "noImplicitAny": true,
         "outDir": "dist",
@@ -10,20 +10,9 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true
     },
-    "filesGlob": [
-        "./src/**/*.ts",
-        "./typings/**/*.ts",
-        "!./node_modules/**/*.ts",
-        "!./lib",
-        "!./dist"
-    ],
-    "files": [
-        "./src/interfaces/index.ts",
-        "./src/Method.ts",
-        "./src/nocker-restifier.ts",
-        "./src/storageProviders/neDB.ts",
-        "./src/storageProviders/Storage.ts",
-        "./typings/global.d.ts"
+    "exclue": [
+        "node_modules",
+        "lib"
     ],
     "compileOnSave": false,
     "formatCodeOptions": {
