@@ -38,9 +38,13 @@ export default class rester implements Restifier {
             case 'post':
                 return new POST(methodConfig.collection, methodConfig.url).exec()
             case 'put':
-                return new PUT(methodConfig.collection, methodConfig.url).exec()
+                let refParam = (methodConfig.refParam) ? methodConfig.refParam : '_id'
+                let url = methodConfig.url + '/:' + refParam
+                return new PUT(methodConfig.collection, url).exec()
             case 'delete':
-                return new DELETE(methodConfig.collection, methodConfig.url).exec()
+            let refParam = (methodConfig.refParam) ? methodConfig.refParam : '_id'
+                let url = methodConfig.url + '/:' + refParam
+                return new DELETE(methodConfig.collection, url).exec()
         }
     }
 }
