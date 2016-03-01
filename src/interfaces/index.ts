@@ -4,21 +4,32 @@ export interface nockerConfig {
     reply: void
 }
 
-export interface methodI {
+export type method =  string | 'get' | 'post' | 'put' | 'delete'
+
+export interface methodI<T> {
+    new(method: method, config: RestifierConfig): T
+    constructor(method: method, config: RestifierConfig): T
     compose(fn: Function): nockerConfig;
+    getFn(): Function;
+    getUrl(): string;
+    getMethod: method
 }
 
-export interface options{
+export interface options {
     only?: string[];
     refParam?: string;
+    mode?: string | "strict" | "normal";
+    baseUrl?: string;
+    storageProvider?: string | "nedb"
 }
 
 export interface RestifierConfig extends options{
     collection: Object;
-    url: string;
+    resUrl: string;
 }
 
 export interface Restifier extends options{
     models: RestifierConfig[] | RestifierConfig;
-    methods: string[];
+    defaultOptions: options;
+    options: options;
 }
