@@ -71,6 +71,9 @@ export default class Method {
                 :
                     '/:' + refParam
                 break;
+            case 'getOne':
+                url += '/:' + refParam
+                break;
             case 'get':
             case 'post':
             default:

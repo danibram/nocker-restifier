@@ -34,8 +34,6 @@ export default class rester implements Restifier {
         let methods = (this.options.only) ? this.options.only : (methodConfig.only) ? methodConfig.only : this.defaultOptions.only;
         let cfg = Object.assign({}, this.options, methodConfig)
 
-        console.log(cfg)
-
         return methods.map((method)=>{
             let methodInstance = new Method(method, cfg)
             return methodInstance.generate()
