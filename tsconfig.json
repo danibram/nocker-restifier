@@ -10,9 +10,10 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true
     },
-    "exclue": [
+    "exclude": [
         "node_modules",
-        "lib"
+        "lib",
+        "dist"
     ],
     "compileOnSave": false,
     "formatCodeOptions": {
